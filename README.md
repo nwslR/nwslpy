@@ -60,9 +60,12 @@ import nwslpy
 stats = nwslpy.load_player_match_stats("portland-thorns-fc-vs-kansas-city-current-2022-10-29")
 players = nwslpy.load_players()
 
-stats[["player_id", "shots_total"]].groupby("player_id").sum("shots_total").join(
-    players.set_index("player_id")
-)[["shots_total", "player_match_name"]].sort_values("shots_total", ascending=False)
+# Select the columns of interest
+stats = stats[["player_id", "shots_total"]].set_index("player_id")
+# Join with information about the players
+stats = stats.join(players.set_index("player_id"))[["shots_total", "player_match_name"]]
+# Find the players with the most shots
+stats = stats.sort_values("shots_total", ascending=False)
 ```
 
 For more complicated examples, including how to visualize the data, check out the [examples](examples/) directory.
