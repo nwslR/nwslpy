@@ -52,7 +52,7 @@ matches = nwslpy.load_matches()
 matches[matches["won_on_penalties"]]
 ```
 
-If you wanted to see which players took the most shots in the 2022 NWSL Championship, you could try 
+If you wanted to see which players took the most shots in the 2022 NWSL Championship, you could try:
 
 ```py
 import nwslpy
