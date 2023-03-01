@@ -1,4 +1,4 @@
-# nwslpy <img src='man/figures/nwslR.png' align="right" height="139" />
+# nwslpy <img src="nwslR.png" align="right" height="139" />
 
 `nwslpy` is a Python wrapper around the [nwslR](https://github.com/nwslR/nwslR) package. The goal of this package is to make the data from `nwslR` available to even more people.
 
@@ -66,18 +66,3 @@ stats[["player_id", "shots_total"]].groupby("player_id").sum("shots_total").join
 ```
 
 For more complicated examples, including how to visualize the data, check out the [examples](examples/) directory.
-
-
-## Package structure
-
-<pre>
-nwslpy
-├── LICENSE
-├── README.md
-├── examples
-│   └── example_1.ipynb
-├── nwslpy
-│   ├── __init__.py
-│   └── nwslpy.py
-└── setup.py
-</pre>
