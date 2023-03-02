@@ -2,3 +2,4 @@ build/
 dist/
 .ipynb_checkpoints
 DEVREADME.md
+__pycache__

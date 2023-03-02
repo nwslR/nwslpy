@@ -31,14 +31,14 @@ pip install nwslpy
 
 ## Usage
 
-If you wanted to see the list of matches that were won on penalties, you could try:
+If you wanted to see the list of matches from 2022, you could try:
 
 ```py
 import nwslpy
 
 # Load all matches and filter to ones in the year 2022
 matches = nwslpy.load_matches()
-matches[matches["won_on_penalties"]]
+matches[matches["year"] == 2022]
 ```
 
 If you wanted to see which players took the most shots in the 2022 NWSL Championship, you could try:
@@ -50,9 +50,9 @@ stats = nwslpy.load_player_match_stats("portland-thorns-fc-vs-kansas-city-curren
 players = nwslpy.load_players()
 
 # Select the columns of interest
-stats = stats[["player_id", "shots_total"]].set_index("player_id")
+stats = stats[["shots_total"]]
 # Join with information about the players
-stats = stats.join(players.set_index("player_id"))[["shots_total", "player_match_name"]]
+stats = stats.join(players)[["shots_total", "player_match_name"]]
 # Find the players with the most shots
 stats = stats.sort_values("shots_total", ascending=False)
 ```

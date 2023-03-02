@@ -78,8 +78,7 @@ def load_team_season_stats(team_id, season):
         pd.read_csv(
             "https://github.com/nwslR/nwsldata/releases/download/team_season_summaries/{0}_{1}.csv".format(
                 team_id, season
-            ),
-            index_col=0,
+            )
         )
     )
 
@@ -97,8 +96,7 @@ def load_player_season_stats(team_id, season):
         pd.read_csv(
             "https://github.com/nwslR/nwsldata/releases/download/player_season_summaries/{0}_{1}.csv".format(
                 team_id, season
-            ),
-            index_col=0,
+            )
         )
     )
 
@@ -115,8 +113,7 @@ def load_team_match_stats(match_id):
         pd.read_csv(
             "https://github.com/nwslR/nwsldata/releases/download/team_match_summaries/{0}.csv".format(
                 match_id
-            ),
-            index_col=0,
+            )
         )
     )
 
@@ -133,7 +130,6 @@ def load_player_match_stats(match_id):
         pd.read_csv(
             "https://github.com/nwslR/nwsldata/releases/download/player_match_summaries/{0}.csv".format(
                 match_id
-            ),
-            index_col=0,
+            )
         )
     )
