@@ -3,10 +3,11 @@ import nwslpy
 
 
 class TestNWSLPY(unittest.TestCase):
-
     def test_matches(self):
         matches = nwslpy.load_matches()
-        self.assertTrue("angel-city-fc-vs-north-carolina-courage-2022-04-29" in matches.index)
+        self.assertTrue(
+            "angel-city-fc-vs-north-carolina-courage-2022-04-29" in matches.index
+        )
 
     def test_players(self):
         players = nwslpy.load_players()
@@ -22,5 +23,5 @@ class TestNWSLPY(unittest.TestCase):
         self.assertTrue("goals" in metrics.index)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()
