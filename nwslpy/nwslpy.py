@@ -9,11 +9,11 @@ def _fix_types(df):
         if col in TYPES.keys():
             t = TYPES[col]
             if t == "datetime":
-                df[col] = pd.to_datetime(df[col])
+                df[col] = pd.to_datetime(df[col], errors="coerce")
             elif t == "date":
-                df[col] = pd.to_datetime(df[col]).dt.date
+                df[col] = pd.to_datetime(df[col], errors="coerce").dt.date
             elif t == "time":
-                df[col] = pd.to_datetime(df[col]).dt.time
+                df[col] = pd.to_datetime(df[col], errors="coerce").dt.time
 
     return df
 
