@@ -16,10 +16,10 @@ pip install nwslpy
 
 - `load_player_match_stats(match_id)`: Loads player level stats for a given
   match
-- `load_player_season_stats(team_id, season)`: Loads player level stats for a
+- `load_player_season_stats(team_abbreviation, season)`: Loads player level stats for a
   team/season
 - `load_team_match_stats(match_id)`: Loads team level stats for a given match
-- `load_team_season_stats(team_id, season)`: Loads team level stats for a team/season
+- `load_team_season_stats(team_abbreviation, season)`: Loads team level stats for a team/season
 - `load_matches()`: All matches from 2016-present with information and
   match IDs
 - `load_players()`: All players rostered from 2016-present with
